@@ -1,14 +1,22 @@
 package lektion6;
 
-import lektion7.Solution;
+import lektion9.dtuPersoner.*;
 
 public class Test {
+
     public static void main(String[] args) {
-        int[] arr = Solution.getCountdown(3);
-        int[] arr2 = Solution.getCountdown(3);
-        int[] arr3 = Solution.concatArray(arr, arr2);
+        Person p = new Person("Brian");
+        Person ansat = new Ansat("Børge", "Compute");
+        Person studerende = new Studerende("Benny", "s134000");
+        Ansat vip = new Vip("Bente", "Fotonik",
+                new String[]{"Indledende Programmering", "Test og Versionsstyring","Udviklingsmetoder"});
+        Ansat tap = new Tap("Bolette", "Elektro", 37);
+        System.out.println(p);
+        System.out.println(ansat);
+        System.out.println(studerende);
+        System.out.println(vip);
+        System.out.println(tap);
 
-
-        Solution.printArray(arr3);
     }
+
 }

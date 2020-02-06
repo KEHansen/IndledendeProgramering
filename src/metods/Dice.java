@@ -4,7 +4,7 @@ public class Dice {
     private final int MAX = 6;
     private int faceValue;
 
-    public Dice(){
+    public Dice() {
         faceValue = (int) (Math.random() * MAX) + 1;
     }
 

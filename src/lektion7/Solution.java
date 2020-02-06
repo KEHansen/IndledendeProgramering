@@ -7,7 +7,7 @@ public class Solution {
             System.out.println(element);
     }
 
-    public static void printBackwards(int[] ia) {
+    public static void printBackwards1D(int[] ia) {
         for (int i = ia.length - 1; i >= 0; i-- )
             System.out.println(ia[i]);
     }
@@ -48,5 +48,53 @@ public class Solution {
         return ia;
     }
 
+    public static void printArray2D(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                System.out.println(arr[i][j]);
+            }
+        }
+    }
+
+    public static void printMatrix(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printBackwards(int[][] arr) {
+        for (int i = arr.length - 1; i >= 0 ; i--) {
+            for (int j = arr[0].length - 1; j >= 0 ; j--) {
+                System.out.println(arr[i][j]);
+            }
+        }
+    }
+
+    public static void firstElement(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i][0]);
+        }
+    }
+
+    public static int[][] create2DArray(int x, int y) {
+        int[][] arr = new int[x][y];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                arr[i][j] = i;
+            }
+        }
+        return arr;
+    }
+
+    public static int[][] createRaggedArray(int[] arr) {
+        int[][] rag = new int[arr.length][];
+        for (int i = 0; i < rag.length; i++) {
+            rag[i] = new int[arr[i]];
+        }
+        return rag;
+    }
 
 }
